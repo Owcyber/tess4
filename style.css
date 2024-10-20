@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+h1 {
+    z-index: 100;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.6s ease, background-color 0.3s;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+img {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hero {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    height: 165px;
+}
+
+.box:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.box.show {
+    transform: scale(1);
+}
+
+.audio-button {
+    background: url('images/sound-on.png') no-repeat center center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#myvideo {
+    filter: blur(10px);
+    position: fixed;
+    top: 0;
+}
+
+.navbar{
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+}
+
+#nav-logo{
+    top: 10px;
+}
+
+.sound-icon {
+    position: absolute;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    left: 10px;
+    top: 10px;
+}
+
+.panel {
+    display: flex;
+}
